@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8">  
+        <!-- Busca entre las imagenes-->     
+           <% @posts.each do |post| %> 
+           <!-- Selecciona la imagen-->   
+                <% post.images&.each do |image| %>
+                    <%= image_tag image, class: "img img-fluid" %>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+</div>

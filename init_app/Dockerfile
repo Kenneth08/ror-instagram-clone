@@ -21,18 +21,20 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 
 
 RUN apt update && apt install yarn -y --no-install-recommends
-RUN yarn install --check-files
+
 
 
 COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
+COPY delete-processes-id.sh delete-processes-id.sh
 
 
 RUN gem install bundler -v "2.1.4"
 RUN bundle install
 
 COPY . .
-
-RUN chmod 777 delete-processes-id.sh
-ENTRYPOINT ["./delete-processes-id.sh"]
+RUN yarn install --check-files
+RUN ls
+#RUN chmod 777 delete-processes-id.sh
+#ENTRYPOINT ["./delete-processes-id.sh"]
 

@@ -483,7 +483,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.4.1)
   byebug
   capybara (>= 2.15)
-  carrierwave-postgresql (= 0.3.0)
+  carrierwave-postgresql
   devise
   figaro
   fog (~> 2.2)

@@ -1,5 +1,5 @@
 class PublicController < ApplicationController
-
+    
     def homepage
         
     end

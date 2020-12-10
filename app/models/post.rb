@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
 
-    mount_uploaders :image, ImageUploader
+    has_many_attached :image, :dependent => :destroy
 
 end
