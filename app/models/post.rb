@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
 
-    has_many_attached :image, :dependent => :destroy
+    has_many_attached :images, :dependent => :destroy
+    
 
 end
